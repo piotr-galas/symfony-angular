@@ -1,0 +1,9 @@
+homepage:
+    resource: "@AppBundle/Resources/config/routing/homepage.yml"
+    prefix:   /
+
+
+#
+#aisel_navigation:
+#    resource: "@AiselNavigationBundle/Resources/config/routing.yml"
+#    prefix:   /

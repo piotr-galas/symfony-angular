@@ -1,0 +1,7 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+
+_front:
+    resource: routings/front.yml
