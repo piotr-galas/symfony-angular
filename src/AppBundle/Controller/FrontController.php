@@ -8,7 +8,7 @@ class FrontController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('AppBundle::homepage.html.twig'
+        return $this->render('AppBundle:Front:index.html.twig'
         );
     }
 }

@@ -1,0 +1,3 @@
+hello:
+    pattern:  /rest/index.{_format}
+    defaults: { _controller: AppBundle:Rest:index, _format: html }
