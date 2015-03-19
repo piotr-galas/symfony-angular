@@ -3,11 +3,23 @@ angular_symfony
 
 There are following package:
 
-FosRestBundle
-JmsSerializerBundle
+ * symfony:
+  * FosRestBundle
+  * JmsSerializerBundle
+ * Angular
+  * Bower
 
-Angular
-Bower
 
 
-A Symfony project created on March 18, 2015, 8:56 am.
+in main directory run install composer, update pareter yml and then run run.php
+
+                php run.php
+
+next in main directory run:
+
+                php -S localhost:8080
+
+Go in browser to
+
+               localhost:8080/app_dev.php/homepage
+
