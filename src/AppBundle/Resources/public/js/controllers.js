@@ -16,5 +16,19 @@ symfonyControllers.controller('Demo2Ctrl', function ($scope, $http) {
     });
 
     $scope.some_variable = 'value of variable';
+});
 
+symfonyControllers.controller('FormCtrl', function ($scope, $http) {
+    $scope.form = {};
+    $scope.form.firstName = 'wpisz imie';
+    $scope.form.lastName = 'wpisz nazwisko';
+
+    $scope.submitForm =  function(item, event){
+        var data = {
+            firstName : $scope.form.firstName,
+            lastName : $scope.form.lastName
+        };
+        console.log(data);
+        $http.post('rest/register', data, {});
+    }
 });

@@ -1,0 +1,20 @@
+<div class="row" ng-controller="FormCtrl">
+    <div class="col-md-9">
+
+            <form ng-submit="submitForm()">
+                <input type="text" name="firstName" ng-model="form.firstName"> First name <br/>
+                <input type="text" name="lastName"  ng-model="form.lastName"> Last name <br/>
+                <input type="submit" value="Submit Form">
+            </form>
+        <p>Check the console in browser after form submision</p>
+
+
+    </div>
+    <div class="col-md-3">
+    <p>Debuging</p>
+        <ul>
+            <li>{{form.firstName}} </li>
+            <li>{{form.lastName}}</li>
+        </ul>
+    </div>
+</div>

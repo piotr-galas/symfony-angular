@@ -1,3 +1,8 @@
 hello:
     pattern:  /rest/index.{_format}
     defaults: { _controller: AppBundle:Rest:index, _format: html }
+
+register:
+    pattern:  /rest/register
+    defaults: { _controller: AppBundle:Rest:register, _format: html }
+    methods: [POST]

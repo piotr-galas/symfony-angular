@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use FOS\RestBundle\Controller\FOSRestController;
+use Symfony\Component\HttpFoundation\Request;
 
 class RestController extends FOSRestController
 {
@@ -24,4 +25,12 @@ class RestController extends FOSRestController
 
         return $this->handleView($view);
     }
+
+    public function registerAction(Request $request)
+    {
+        var_dump($request->request->all());exit;
+    }
+
+
+
 }

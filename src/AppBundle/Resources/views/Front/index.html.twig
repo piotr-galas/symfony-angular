@@ -4,47 +4,36 @@
     <div class="body" ng-app="symfonyApp">
         <div class="container">
             <div ng-view></div>
-            <div>
-                links to demo:
-                <ul>
-                    <li>
-                        <a href="{{ url('hello') }}">/app_dev.php/rest/index</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('hello',{'_format':'json'}) }}">/app_dev.php/rest/index.json</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('hello',{'_format':'xml'}) }}">/app_dev.php/rest/index.xml</a>
-                    </li>
-                </ul>
+            <div class="row" style="padding-top:150px;">
+                <div class="col-md-6">
+                    <p>links to symfony action(this is one action):</p>
+                    <ul>
+                        <li>
+                            <a href="{{ url('hello') }}">/app_dev.php/rest/index</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('hello',{'_format':'json'}) }}">/app_dev.php/rest/index.json</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('hello',{'_format':'xml'}) }}">/app_dev.php/rest/index.xml</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <p>links to angular partial located in public </p>
+                    <ul>
+                        <li>
+                            <a href="#/phones">get json data from disc, (default page)</a>
+                        </li>
+                        <li>
+                            <a href="#/sample_array">get json array</a>
+                        </li>
+                        <li>
+                            <a href="#/form">sample form</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            {#<div class="row" ng-controller="DemoCtrl">#}
-                {#<div class="col-md-10">#}
-                    {#<h1>{{ '{{ some_variable }}' }}</h1>#}
-
-                    {#<li ng-repeat="phone in phones">#}
-                        {#<span>{{ '{{phone.name}}' }}</span>#}
-
-                    {#</li>#}
-                {#</div>#}
-                {#<div class="col-md-2">#}
-                    {#&#123;&#35;body&#35;&#125;#}
-                    {#<div>#}
-                        {#links to demo:#}
-                        {#<ul>#}
-                            {#<li>#}
-                                {#<a href="{{ url('hello') }}">/app_dev.php/rest/index</a>#}
-                            {#</li>#}
-                            {#<li>#}
-                                {#<a href="{{ url('hello',{'_format':'json'}) }}">/app_dev.php/rest/index.json</a>#}
-                            {#</li>#}
-                            {#<li>#}
-                                {#<a href="{{ url('hello',{'_format':'xml'}) }}">/app_dev.php/rest/index.xml</a>#}
-                            {#</li>#}
-                        {#</ul>#}
-                    {#</div>#}
-                {#</div>#}
-             {#</div>#}
         </div>
     </div>
 {%  endblock %}

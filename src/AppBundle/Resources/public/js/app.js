@@ -14,9 +14,13 @@ symfonyApp.config(['$routeProvider',
                 templateUrl: '../../bundles/app/partials/demo.html',
                 controller: 'DemoCtrl'
             }).
-            when('/phones2', {
-                templateUrl: '../../bundles/app/partials/demo2.html',
+            when('/sample_array', {
+                templateUrl: '../../bundles/app/partials/sample_array.html',
                 controller: 'Demo2Ctrl'
+            }).
+            when('/form', {
+                templateUrl: '../../bundles/app/partials/form.html',
+                controller: 'FormCtrl'
             }).
             otherwise({
                 redirectTo: '/phones'
