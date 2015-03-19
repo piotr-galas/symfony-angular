@@ -8,7 +8,17 @@ class RestController extends FOSRestController
 {
     public function indexAction()
     {
-        $view = $this->view(array('aa'=>'bb'), 200)
+
+        $sampleData = array(
+            'aaaa' => 'bbbb',
+            'cccc' => 'dddd'
+        );
+
+
+
+
+
+        $view = $this->view($sampleData, 200)
             ->setTemplate("AppBundle:Rest:index.html.twig")
         ;
 

@@ -15,7 +15,7 @@ symfonyApp.config(['$routeProvider',
                 controller: 'DemoCtrl'
             }).
             when('/phones2', {
-                templateUrl: '../../bundles/app/partials/demo.html',
+                templateUrl: '../../bundles/app/partials/demo2.html',
                 controller: 'Demo2Ctrl'
             }).
             otherwise({
