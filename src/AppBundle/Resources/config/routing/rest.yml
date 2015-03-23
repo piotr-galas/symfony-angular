@@ -12,8 +12,8 @@ form_in_partial:
     defaults: { _controller: AppBundle:Rest:formInPartial }
 
 form_from_twig:
-    pattern:  /rest/form_in_twig
-    defaults: { _controller: AppBundle:Rest:formInTwig }
+    pattern:  /rest/form_in_twig.{_format}
+    defaults: { _controller: AppBundle:Rest:formInTwig, _format: html }
 
 form_from_twig_process:
     pattern:  /rest/form_in_twig_process
