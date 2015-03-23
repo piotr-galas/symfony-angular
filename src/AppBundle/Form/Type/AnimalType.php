@@ -13,7 +13,9 @@ class AnimalType extends AbstractType
     {
         $builder
 
-            ->add('name')
+            ->add('name', null , array(
+                    'required' =>true
+                ))
 
         ;
     }

@@ -1,0 +1,59 @@
+<form ng-submit="submitForm()" name="animal_form_type"  method="post">
+{#{{ form_start(animalForm,{'attr': {'ng-submit':'submitForm()'}}) }}#}
+{{ form_widget(animalForm.name, {'attr': {'ng-model':'form.name'}}) }}
+
+<input type="submit" value="Save" />
+</form>
+
+
+
+{# symfony form request and response #}
+
+{#Cache-Control	no-cache#}
+{#Connection	close#}
+{#Content-Type	text/html; charset=UTF-8#}
+{#Date	Mon, 23 Mar 2015 08:48:23 GMT#}
+{#Host	localhost:8000#}
+{#X-Debug-Token	8c84ca#}
+{#X-Debug-Token-Link	/app_dev.php/_profiler/8c84ca#}
+{#X-Powered-By	PHP/5.5.9-1ubuntu4.7#}
+
+
+{#Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8#}
+{#Accept-Encoding	gzip, deflate#}
+{#Accept-Language	en-US,en;q=0.5#}
+{#Connection	keep-alive#}
+{#Cookie	cb-enabled=accepted; wp-settings-time-1=1422369991; wp-settings-2=editor%3Dtinymce%26hidetb%3D0%26libraryContent%3Dbrowse; wp-settings-time-2=1422380494; cookies-accepted=1; _ga=GA1.1.2139481734.1425294853; __utma=111872281.2139481734.1425294853.1425294853.1425370940.2; __utmz=111872281.1425294853.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); device=phone; PHPSESSID=92tk0k4s31de6jlc86u8qlc581#}
+{#Host	localhost:8000#}
+{#Referer	http://localhost:8000/app_dev.php/rest/form_in_twig#}
+{#User-Agent	Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0#}
+
+{#Content-Length	29#}
+{#Content-Type	application/x-www-form-urlencoded#}
+
+
+{# angular form request and response  before changeing
+It was not work , but after setting Content-Type	application/x-www-form-urlencoded
+and $.param in angular controller everything work
+#}
+
+
+
+{#Connection	close#}
+{#Content-Type	text/html#}
+{#Host	localhost:8000#}
+{#X-Powered-By	PHP/5.5.9-1ubuntu4.7#}
+
+
+{#Accept	application/json, text/plain, */*#}
+{#Accept-Encoding	gzip, deflate#}
+{#Accept-Language	en-US,en;q=0.5#}
+{#Cache-Control	no-cache#}
+{#Connection	keep-alive#}
+{#Content-Length	35#}
+{#Content-Type	application/json;charset=utf-8#}
+{#Cookie	cb-enabled=accepted; wp-settings-time-1=1422369991; wp-settings-2=editor%3Dtinymce%26hidetb%3D0%26libraryContent%3Dbrowse; wp-settings-time-2=1422380494; cookies-accepted=1; _ga=GA1.1.2139481734.1425294853; __utma=111872281.2139481734.1425294853.1425294853.1425370940.2; __utmz=111872281.1425294853.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); device=phone; PHPSESSID=92tk0k4s31de6jlc86u8qlc581#}
+{#Host	localhost:8000#}
+{#Pragma	no-cache#}
+{#Referer	http://localhost:8000/app_dev.php/homepage#}
+{#User-Agent	Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0#}

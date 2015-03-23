@@ -22,14 +22,14 @@ symfonyApp.config(['$routeProvider',
                 templateUrl: '../../bundles/app/partials/form_html.html',
                 controller: 'FormHtmlCtrl'
             }).
-            when('/form_symfony', {
+            when('/form_symfony_partial', {
                 templateUrl: '../../bundles/app/partials/form_symfony.html',
                 controller: 'FormSymfonyCtrl'
             }).
-//            when('/form_symfony/', {
-//                templateUrl: 'rest/print',
-//                controller: 'FormSymfonyCtrl'
-//            }).
+            when('/form_symfony_twig', {
+                templateUrl: 'rest/form_in_twig',
+                controller: 'FormSymfonyTwigCtrl'
+            }).
             otherwise({
                 redirectTo: '/phones'
             });

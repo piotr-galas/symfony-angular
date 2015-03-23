@@ -34,7 +34,7 @@ symfonyControllers.controller('FormHtmlCtrl', function ($scope, $http) {
 });
 
 symfonyControllers.controller('FormSymfonyCtrl', function ($scope, $http, $sce) {
-    $http.get('rest/print').success(function(data){
+    $http.get('rest/form_in_partial').success(function(data){
 
         $scope.form = $sce.trustAsHtml(data)
     });
@@ -47,6 +47,24 @@ symfonyControllers.controller('FormSymfonyCtrl', function ($scope, $http, $sce) 
         console.log(data);
         $http.post('rest/register', data, {});
     }
+});
 
+symfonyControllers.controller('FormSymfonyTwigCtrl', function ($scope, $http, $sce) {
 
+    $scope.submitForm =  function(item, event){
+        var data = {
+            'animal_form_type[name]' : $scope.form.name
+//            lastName : $scope.form.name
+        };
+        console.log(data);
+//        $http.post('rest/form_in_twig_process', data, {});
+        $http({
+            method: "POST",
+            url: 'rest/form_in_twig',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            data: $.param(data)
+        });
+    }
 });

@@ -7,6 +7,14 @@ register:
     defaults: { _controller: AppBundle:Rest:register, _format: html }
     methods: [POST]
 
-testowy:
-    pattern:  /rest/print
-    defaults: { _controller: AppBundle:Rest:print }
+form_in_partial:
+    pattern:  /rest/form_in_partial
+    defaults: { _controller: AppBundle:Rest:formInPartial }
+
+form_from_twig:
+    pattern:  /rest/form_in_twig
+    defaults: { _controller: AppBundle:Rest:formInTwig }
+
+form_from_twig_process:
+    pattern:  /rest/form_in_twig_process
+    defaults: { _controller: AppBundle:Rest:formInTwigProcess }

@@ -29,15 +29,17 @@ class RestController extends FOSRestController
         return $this->handleView($view);
     }
 
-    public function registerAction(Request $request)
+    public function dumpAction(Request $request)
     {
         var_dump($request->request->all());exit;
     }
 
-    public function printAction(Request $request)
+    public function formInTwigProcessAction(Request $request)
     {
         $animal = new Animal();
         $formType = new AnimalType();
+
+
 
         $form = $this->createForm($formType, $animal);
         $form->handleRequest($request);
@@ -46,7 +48,46 @@ class RestController extends FOSRestController
         $view = $this->view(array(
                 'animalForm' => $form->createView()
             ), 200)
+            ->setTemplate("AppBundle:Partial:test2.html.twig")
+        ;
+        return $this->handleView($view);
+
+
+    }
+
+    public function formInPartialAction(Request $request)
+    {
+        $animal = new Animal();
+        $formType = new AnimalType();
+
+        $form = $this->createForm($formType, $animal);
+
+        $form->handleRequest($request);
+
+
+        $view = $this->view(array(
+                'animalForm' => $form->createView()
+            ), 200)
             ->setTemplate("AppBundle:Partial:test.html.twig")
+        ;
+        return $this->handleView($view);
+    }
+
+    public function formInTwigAction(Request $request)
+    {
+
+        $animal = new Animal();
+        $formType = new AnimalType();
+
+        $form = $this->createForm($formType, $animal);
+        $form->handleRequest($request);
+
+//        var_dump($form->get('name'));exit();
+
+        $view = $this->view(array(
+                'animalForm' => $form->createView()
+            ), 200)
+            ->setTemplate("AppBundle:Partial:test2.html.twig")
         ;
         return $this->handleView($view);
     }
