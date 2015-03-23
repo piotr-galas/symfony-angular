@@ -1,0 +1,12 @@
+AppBundle\Entity\Animal:
+  type: entity
+  table: animal
+  id:
+     id:
+        type: integer
+        generator: { strategy: auto }
+  fields:
+     name:
+        type: string
+        length: 100
+        nullable: true

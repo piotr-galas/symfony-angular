@@ -18,9 +18,17 @@ symfonyApp.config(['$routeProvider',
                 templateUrl: '../../bundles/app/partials/sample_array.html',
                 controller: 'Demo2Ctrl'
             }).
-            when('/form', {
-                templateUrl: '../../bundles/app/partials/form.html',
-                controller: 'FormCtrl'
+            when('/form_html', {
+                templateUrl: '../../bundles/app/partials/form_html.html',
+                controller: 'FormHtmlCtrl'
+            }).
+//            when('/form_symfony/', {
+//                templateUrl: '../../bundles/app/partials/form_symfony.html',
+//                controller: 'FormSymfonyCtrl'
+//            }).
+            when('/form_symfony/', {
+                templateUrl: 'rest/print',
+                controller: 'FormSymfonyCtrl'
             }).
             otherwise({
                 redirectTo: '/phones'

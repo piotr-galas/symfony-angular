@@ -6,3 +6,7 @@ register:
     pattern:  /rest/register
     defaults: { _controller: AppBundle:Rest:register, _format: html }
     methods: [POST]
+
+testowy:
+    pattern:  /rest/print
+    defaults: { _controller: AppBundle:Rest:print }
