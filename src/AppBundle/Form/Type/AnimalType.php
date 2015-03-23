@@ -15,7 +15,6 @@ class AnimalType extends AbstractType
 
             ->add('name')
 
-
         ;
     }
 
